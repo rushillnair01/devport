@@ -33,34 +33,32 @@ export function TerminalHeader() {
 
             <div className="flex items-center space-x-4">
               <motion.a
-                href="mailto:devtosend@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=Devf0220@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, color: "#00ff41" }}
                 className="text-green-400 hover:text-green-300 transition-colors"
               >
                 <Mail size={20} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://github.com/devvijayfuletra"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, color: "#00ff41" }}
                 className="text-green-400 hover:text-green-300 transition-colors"
               >
                 <Github size={20} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://www.linkedin.com/in/dev-fuletra-2833081bb/"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, color: "#00ff41" }}
                 className="text-green-400 hover:text-green-300 transition-colors"
               >
                 <Linkedin size={20} />
               </motion.a>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded font-mono text-sm hover:bg-green-500/30 transition-colors flex items-center space-x-2"
-              >
-                <Download size={16} />
-                <span>./resume.pdf</span>
-              </motion.button>
             </div>
           </div>
         </div>

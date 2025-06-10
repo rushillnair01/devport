@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 export function CodeHeroSection() {
   const [currentLine, setCurrentLine] = useState(0)
@@ -33,6 +33,13 @@ export function CodeHeroSection() {
       setCurrentLine((prev) => (prev + 1) % codeLines.length)
     }, 2000)
     return () => clearInterval(interval)
+  }, [])
+
+  const scrollToSection = useCallback((id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    }
   }, [])
 
   return (
@@ -124,6 +131,7 @@ export function CodeHeroSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-green-500/20 border border-green-500 text-green-400 px-6 py-3 rounded font-mono hover:bg-green-500/30 transition-colors"
+                onClick={() => scrollToSection("projects")}
               >
                 ./view_projects.sh
               </motion.button>
@@ -131,6 +139,7 @@ export function CodeHeroSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-green-500/50 text-green-400 px-6 py-3 rounded font-mono hover:bg-green-500/10 transition-colors"
+                onClick={() => scrollToSection("contact")}
               >
                 cat contact.txt
               </motion.button>

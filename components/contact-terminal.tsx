@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { useRef } from "react"
 import { Send, Mail, Phone, MapPin } from "lucide-react"
 
 export function ContactTerminal() {
@@ -44,7 +45,7 @@ export function ContactTerminal() {
   }
 
   return (
-    <section className="py-20 px-6">
+    <section id="contact" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -99,7 +100,7 @@ export function ContactTerminal() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Quick Contact */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -107,63 +108,19 @@ export function ContactTerminal() {
             viewport={{ once: true }}
             className="bg-gray-900/90 backdrop-blur-sm border border-green-500/30 rounded-lg p-6"
           >
-            <h3 className="text-xl font-bold text-green-400 font-mono mb-6">send_message.py</h3>
-
-            <form className="space-y-4">
-              <div>
-                <label className="block text-green-400 text-sm font-mono mb-2">name = input("Your name: ")</label>
-                <input
-                  type="text"
-                  className="w-full bg-black border border-green-500/30 rounded px-3 py-2 text-green-400 font-mono focus:border-green-500 focus:outline-none"
-                  placeholder="Enter your name"
-                />
+            <h4 className="text-green-400 font-mono mb-4">Quick Access:</h4>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-3 text-sm">
+                <Mail className="text-green-400" size={16} />
+                <span className="text-gray-300 font-mono">Devf0220@gmail.com</span>
               </div>
-
-              <div>
-                <label className="block text-green-400 text-sm font-mono mb-2">email = input("Your email: ")</label>
-                <input
-                  type="email"
-                  className="w-full bg-black border border-green-500/30 rounded px-3 py-2 text-green-400 font-mono focus:border-green-500 focus:outline-none"
-                  placeholder="your.email@domain.com"
-                />
+              <div className="flex items-center space-x-3 text-sm">
+                <Phone className="text-green-400" size={16} />
+                <span className="text-gray-300 font-mono">+91 72596 00532</span>
               </div>
-
-              <div>
-                <label className="block text-green-400 text-sm font-mono mb-2">message = input("Your message: ")</label>
-                <textarea
-                  rows={4}
-                  className="w-full bg-black border border-green-500/30 rounded px-3 py-2 text-green-400 font-mono focus:border-green-500 focus:outline-none resize-none"
-                  placeholder="Type your message here..."
-                ></textarea>
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="submit"
-                className="w-full bg-green-500/20 border border-green-500 text-green-400 py-3 rounded font-mono hover:bg-green-500/30 transition-colors flex items-center justify-center space-x-2"
-              >
-                <Send size={16} />
-                <span>execute_send()</span>
-              </motion.button>
-            </form>
-
-            {/* Quick Contact */}
-            <div className="mt-6 pt-6 border-t border-green-500/30">
-              <h4 className="text-green-400 font-mono mb-4">Quick Access:</h4>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-3 text-sm">
-                  <Mail className="text-green-400" size={16} />
-                  <span className="text-gray-300 font-mono">devtosend@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <Phone className="text-green-400" size={16} />
-                  <span className="text-gray-300 font-mono">+91 72596 00532</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <MapPin className="text-green-400" size={16} />
-                  <span className="text-gray-300 font-mono">Bengaluru, India</span>
-                </div>
+              <div className="flex items-center space-x-3 text-sm">
+                <MapPin className="text-green-400" size={16} />
+                <span className="text-gray-300 font-mono">Bengaluru, India</span>
               </div>
             </div>
           </motion.div>
