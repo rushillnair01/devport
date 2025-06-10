@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Dev Fuletra',
+  description: 'Portfolio of Dev Fuletra',
+  generator: 'Dev Fuletra',
 }
 
 export default function RootLayout({
@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon%20(1).ico" type="image/x-icon" />
+      </head>
       <body>{children}</body>
     </html>
   )

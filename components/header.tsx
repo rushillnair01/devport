@@ -21,7 +21,7 @@ export function Header() {
 
         <div className="flex items-center space-x-6">
           <motion.a
-            href="mailto:devtosend@gmail.com"
+            href="mailto:Devf0220@gmail.com"
             whileHover={{ scale: 1.1 }}
             className="text-gray-300 hover:text-purple-400 transition-colors"
           >
@@ -37,7 +37,7 @@ export function Header() {
             <Github size={20} />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/devvijayfuletra"
+            href="https://www.linkedin.com/in/dev-fuletra-2833081bb/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
